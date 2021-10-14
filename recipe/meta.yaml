@@ -1,5 +1,5 @@
 {% set name = "types-dateparser" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-dateparser-{{ version }}.tar.gz
-  sha256: f90d24b9fd99412f79621b47676cd951fb49f8c5d0c0f7c825435c367ea38293
+  sha256: 52e6b4a574617f7ea333a18b53ff56b16e4c1b2e3da91cdf118eff852fd04ef5
 
 build:
   number: 0
