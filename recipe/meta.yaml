@@ -1,33 +1,34 @@
-{% set name = "types-dateparser" %}
 {% set version = "1.2.0.20240420" %}
 
-
 package:
-  name: {{ name|lower }}
+  name: types-dateparser
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/types-dateparser-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/t/types-dateparser/types-dateparser-{{ version }}.tar.gz
   sha256: 8f813ddf5ef41b32cabe6167138ae833ada10c22811e42220a1e38a0be7adbdc
 
 build:
   number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - python >={{ python_min }}
 
 test:
   requires:
+    - pip
     - python {{ python_min }}
   commands:
+    - pip check
     - test -f $SP_DIR/dateparser-stubs/__init__.pyi
-
 
 about:
   home: https://github.com/python/typeshed
