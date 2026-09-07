@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.4.2.20260813"
+  version: "1.4.3.20260907"
 
 package:
   name: types-dateparser
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/types-dateparser/types_dateparser-${{ version }}.tar.gz
-  sha256: f8e5dbdffca084a47f35efe181715b528f67436f9a44e476c514a3841452b206
+  sha256: b491f801efcd263ea5de9485cdb3631c44b6ee9af8e9b984c49d973c46a14d26
 
 build:
   number: 0
